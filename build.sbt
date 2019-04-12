@@ -10,8 +10,8 @@ val root = project.in(file("."))
       "-feature", "-unchecked", "-language:implicitConversions", "-language:postfixOps"),
 
     libraryDependencies ++= List(
-      "io.gatling.highcharts" % "gatling-charts-highcharts" % "3.0.3" % "test,it",
-      "io.gatling" % "gatling-test-framework" % "3.0.3" % "test,it",
+      "io.gatling.highcharts" % "gatling-charts-highcharts" % "3.0.3",
+      "io.gatling" % "gatling-test-framework" % "3.0.3",
       "org.scalatest" % "scalatest_2.12" % "3.0.5",
       "com.typesafe.akka" %% "akka-http" % "10.1.8"
     )
