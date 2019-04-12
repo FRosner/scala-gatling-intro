@@ -38,3 +38,17 @@ Utils.measure("Assigning and printing a value") {
   val x = 5
   println(x)
 }
+
+// Case classes represent data
+case class Person(name: String, height: Int)
+val frank = Person("Frank", 186)
+
+// Pattern matching allows deconstruction of case classes
+val greet: Person => String = _ match {
+  case Person("Frank", _) => "Hi Frank!"
+  case Person(name, height) if height > 200 => s"Wow you are tall, $name"
+  case _ => "I don't know you :("
+}
+greet(frank)
+greet(Person("Reinhard", 205))
+greet(Person("Martin", 175))
